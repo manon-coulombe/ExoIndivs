@@ -204,32 +204,25 @@ const numbers = [
 let a = 0;
 let b = 1;
 let c = 2;
-var result = numbers[a]+numbers[b]+numbers[c];
 let found = false
 
 function test() {
-  result = numbers[a]+numbers[b]+numbers[c];
-  console.log(result)
+  result = numbers[a] + numbers[b] + numbers[c];
   if (result === 2020) {
     found = true;
     console.log(result);
-  }else {
-    found = false;
-    //console.log('false');
   }
 }
 
 while (found === false) {
   for (a; a < numbers.length; a++) {
-    //console.log("a = " + numbers[a]);
-    test();
-  }
-  for (b; b < numbers.length; b++) {
-    //console.log("b = " + numbers[b]);
-    test();
-  }
-  for (c; c < numbers.length; c++) {
-    //console.log("c = " + numbers[c]);
-    test();
+    console.log("a = " + numbers[a]);
+    for (b; b < numbers.length; b++) {
+      console.log("b = " + numbers[b]);
+      for (c; c < numbers.length; c++) {
+        console.log("c = " + numbers[c]);
+        test();
+      }
+    }
   }
 }
